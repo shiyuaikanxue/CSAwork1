@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 600px;
+            height: 600px;
+            margin: 0 auto;
+            /* border: 1px solid black; */
+            transform-style: preserve-3d;
+            position: relative;
+            transform: rotateX(-30deg);
+        }
+        .pic{
+            height: 200px;
+            width: 200px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -100px;
+            margin-top: -100px;
+        }
+        .pic7,.pic3,.pic8{
+            background-image: url(photo/图例2.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .pic5,.pic1,.pic4{
+            background-image: url(photo/图例3.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .pic2,.pic6{
+            background-image: url(photo/1\(1\).jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .pic1{
+            transform: translateZ(300px);
+        }
+        .pic3{
+            transform: translateX(40px) translateZ(-263px) rotateY(0deg);
+        }
+        .pic2{
+            transform: translateX(300px) translateZ(61px) rotateY(83deg);
+        }
+        .pic4{
+            transform: translateX(-174px) translateZ(221px) rotateY(-51deg);
+        }
+        .pic5{
+            transform: translateX(192px) translateZ(241px) rotateY(36deg);
+        }
+        .pic6{
+            transform: translateX(-239px) translateZ(0px) rotateY(87deg);
+        }
+        .pic7{
+            transform: translateX(-147px) translateZ(-192px) rotateY(43deg);
+        }
+        .pic8{
+            transform: translateX(228px) translateZ(-192px) rotateY(-41deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="pic pic1"></div>
+        <div class="pic pic2"></div>
+        <div class="pic pic3"></div>
+        <div class="pic pic4"></div>
+        <div class="pic pic5"></div>
+        <div class="pic pic6"></div>       
+        <div class="pic pic7"></div>       
+        <div class="pic pic8"></div>       
+    </div>
+</body>
+</html>
