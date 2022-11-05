@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            height: 100%;
+            background-image: url(photo/图例3.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        html,
+        body {
+            height: 98%;
+        }
+
+        .logo {
+            width: 36px;
+            height: 36px;
+            background-image: url(photo/第一次作业windows图标.png);
+            position: absolute;
+            background-size: 100% 100%;
+            top: 15px;
+            left: 245px;
+        }
+
+        .logoname {
+            height: 36px;
+            font-size: 22px;
+            line-height: 36px;
+            position: absolute;
+            display: inline-block;
+            top: 15px;
+            left: 291px;
+            color: white;
+        }
+
+        .navigation {
+            position: absolute;
+            top: 15px;
+            left: 586px;
+            list-style: none;
+        }
+
+        .navigation li {
+            height: 36px;
+            float: left;
+            margin-right: 54px;
+            color: white;
+        }
+
+        li span {
+            font-size: 18px;
+            line-height: 36px;
+        }
+
+        a:link {
+            color: #edecef;
+        }
+
+        a:visited {
+            color: #edecef;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        a:active {
+            color: #edecef;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        li .more {
+            font-size: 36px;
+            position: relative;
+            top: -10px;
+        }
+
+        .category {
+            position: absolute;
+            right: 273px;
+            top: 20px;
+            background-image: url(photo/第一次作业分类符.png);
+            width: 30px;
+            height: 21px;
+            background-size: 100% 100%;
+
+        }
+
+        .personnality {
+            background-image: url(photo/第一次作业个人头像图标.png);
+            position: absolute;
+            right: 352px;
+            top: 10px;
+            width: 48px;
+            height: 48px;
+            background-size: 100% 100%;
+        }
+
+        .enter {
+            font-size: 18px;
+            display: inline-block;
+            position: absolute;
+            right: 409px;
+            top: 25px;
+            color: #ffffff;
+
+        }
+        .Input{
+            width: 894px;
+            height: 78px;
+            position: absolute;
+            top: 285px;
+            left: 589px;
+            background-image: url(photo/第一次作业椭圆输入框.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        
+        .Input input{
+            float: left;
+            width: 500px;
+            height: 36px;
+            margin: 17px 26px;
+            border: 0px;
+            outline: none;
+        }
+        .Microphone{
+            float: right;
+            height: 52px;
+            width: 48px;
+            margin-top: 13px;
+            margin-right: 16px;
+            background-image: url(photo/第一次作业麦克风图标.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .search{
+            float: right;
+            height: 52px;
+            width: 48px;
+            margin-top: 14px;
+            margin-right: 26px;
+            background-image: url(photo/第一次作业搜索框图标.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+        }
+        .home{
+            background-image: url(photo/第一次作业椭圆.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 231px;
+            left: 619px;
+            background-size: 100% 100%;
+            width: 114px;
+            height: 47px;
+        }
+        .home p{
+            font-size: 23px;
+            display: inline-block;
+            margin-top: 8px;
+            margin-left: 23px;
+            
+        }
+        .nation{
+            background-image: url(photo/第一次作业椭圆.png);
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 231px;
+            left: 739px;
+            background-size: 100% 100%;
+            width: 114px;
+            height: 47px;
+            opacity: 0.5;
+        }
+        .nation p{
+            font-size: 23px;
+            display: inline-block;
+            margin-top: 8px;
+            margin-left: 23px;
+            
+        }
+        .last{
+            background-color: #333333;
+            overflow: hidden;
+        }
+        .last ul{
+            list-style: none;
+            margin-left: 247px;
+        }
+        .last ul li{
+            height: 100%;
+            float: left;
+            font-size: 16px;
+            line-height: 50px;
+            margin-right: 37px;
+            color: #666666;
+       }
+       ul li a:link{
+        color: #666666;
+       }
+       ul li a:visited{
+        color: #666666;
+        text-decoration:solid;
+       }
+       ul li a:hover{
+        color: #666666;
+       }
+       ul li a:active{
+        color: #666666;
+       }
+       .last ul .annotation{
+        margin-left: 200px;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo"></div>
+        <p class="logoname">Microsoft Bing</p>
+        <ul class="navigation">
+            <li><a href="https://cn.bing.com/images/trending?form=Z9LH" target="_blank"><span>图片</span></a></li>
+            <li><a href="https://cn.bing.com/videos/trending?form=Z9LH1" target="_blank"><span>视频</span></a></li>
+            <li><a href="https://cn.bing.com/maps?FORM=Z9LH2" target="_blank"><span>地图</span></a></li>
+            <li class="more">
+                <a href=""><span class="more">. . .</span></a>
+            </li>
+        </ul>
+        <div class="category"></div>
+        <div class="home"><p>国内版</p></div>
+        <div class="nation"><p>国际版</p></div>
+        <div class="personnality"></div>
+        <p class="enter"><a
+                href="https://login.live.com/login.srf?wa=wsignin1.0&rpsnv=13&id=264960&wreply=https%3a%2f%2fcn.bing.com%2fsecure%2fPassport.aspx%3frequrl%3dhttps%253a%252f%252fcn.bing.com%252f%253fwlsso%253d1%2526wlexpsignin%253d1%26sig%3d2E4D2BDD638C66771DE1398F625E6711&wp=MBI_SSL&lc=2052&CSRFToken=7129b29d-13e9-4be4-a4d1-fa599e3d2121&aadredir=1">登录</a>
+        </p>
+        <div class="Input"><input type="text">
+        <div class="search"></div>
+        <div class="Microphone"></div>
+        </div>
+    </div>
+    <div class="last">
+        <ul>
+            <li><a href="https://dxzhgl.miit.gov.cn/dxxzsp/xkz/xkzgl/resource/qiyereport.jsp?num=caf04fa4-bd8a-4d9e-80b6-2aa1b86c1509&type=yreport">增值电信业务经营许可证：合字B2-20090007</a></li>
+            <li><a href="https://beian.miit.gov.cn/#/Integrated/index">京ICP备10036305号-7</a></li>
+            <li><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802022657">京公网安备11010802022657号</a></li>
+            <li><a href="https://privacy.microsoft.com/zh-cn/privacystatement">隐私与 Cookie</a></li>
+            <li><a href="https://www.microsoft.com/zh-cn/servicesagreement/">法律声明</a></li>
+            <li><a href="https://biying.westwin.com/">广告</a></li>
+            <li><a href="https://account.microsoft.com/privacy/ad-settings/signedout?refd=cn.bing.com&ru=https%3A%2F%2Faccount.microsoft.com%2Fprivacy%2Fad-settings%3Frefd%3Dcn.bing.com">关于我们的广告</a></li>
+            <li><a href="https://support.microsoft.com/zh-cn/topic/microsoft-%E5%BF%85%E5%BA%94%E5%B8%AE%E5%8A%A9-82d20721-2d6f-4012-a13d-d1910ccf203f">帮助</a></li>
+            <li><a href="">反馈</a></li>
+            <li class="annotation">© 2022 Microsoft</li>
+        </ul>
+
+    </div>
+</body>
+
+</html>
