@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    p{
+      color: white;
+      line-height: 57px;
+      font-size: 14px;
+      text-indent: 19px;
+    }
+    .item-1{
+      grid-area: block1;
+      background-color: #b03532;
+    }
+    .item-2{
+      grid-area: block2;
+      background-color: #33a8a5;
+
+    }
+    .item-3{
+      grid-area: block3;
+      background-color: #ff9068;
+    }
+    .item-4{
+      grid-area: block4;
+      background-color: #69478f;
+    }
+    .item-5{
+      grid-area: block5;
+      background-color: #3d8ab1;
+    }
+    .item-6{
+      grid-area: block6;
+      background-color: #4364a1;
+    }
+    .item-7{
+      grid-area: block7;
+      background-color: #e03f3f;
+    }
+    .item-8{
+      grid-area: block8;
+      background-color: #58a528;
+    }
+    .item-9{
+      grid-area: block9;
+      background-color: #b03532;
+    }
+    .item-10{
+      grid-area: block10;
+      background-color: #4364a1;
+    }
+    .item-11{
+      grid-area: block11;
+      background-color: #33a8a5;
+    }
+    .item-12{
+      grid-area: block12;
+      background-color: #ff9068;
+    }
+    .item-13{
+      grid-area: block13;
+      background-color: #3d8ab1;
+    }
+    .item-14{
+      grid-area: block14;
+      background-color: #da6f2b;
+    }
+    .item-15{
+      grid-area: block15;
+      background-color: #58a528;
+    }
+    .item-16{
+      grid-area: block16;
+      background-color: #309979;
+    }
+    .item-17{
+      grid-area: block17;
+      background-color: #69478f;
+    }
+    .item-18{
+      grid-area: block18;
+      background-color: #da6f2b;
+    }
+    .container{
+      width: 556px;
+      height: 291px;
+      display: grid;
+      margin: 50px;
+      grid-template-columns: [col-start] 1fr [col-start] 1fr [col-start] 1fr [col-start] 1fr [col-start] 1fr [col-start];
+      grid-template-rows:  [row-start] 1fr [row-start] 1fr [row-start] 1fr [row-start] 1fr [row-start] 1fr [row-start];
+      grid-column-gap: 1px;
+      grid-row-gap: 1px;
+      grid-template-areas:
+      "block1 block2 block3 block4 block5"
+      "block6 block7 block7 block8 block10"
+      "block11 block7 block7 block9 block9"
+      "block12 block13 block14 block9 block9"
+      "block15 block16 block17 block18 ." ;
+      
+    }
+  </style>
+</head>
+<body>
+    <div class="container">
+      <div class="item-1"><p>1</p></div>
+      <div class="item-2"><p>2</p></div>
+      <div class="item-3"><p>3</p></div>
+      <div class="item-4"><p>4</p></div>
+      <div class="item-5"><p>5</p></div>
+      <div class="item-6"><p>6</p></div>
+      <div class="item-7"><p>7</p></div>
+      <div class="item-8"><p>8</p></div>
+      <div class="item-9"><p>9</p></div>
+      <div class="item-10"><p>10</p></div>
+      <div class="item-11"><p>11</p></div>
+      <div class="item-12"><p>12</p></div>
+      <div class="item-13"><p>13</p></div>
+      <div class="item-14"><p>14</p></div>
+      <div class="item-15"><p>15</p></div>
+      <div class="item-16"><p>16</p></div>
+      <div class="item-17"><p>17</p></div>
+      <div class="item-18"><p>18</p></div>
+    </div>
+</body>
+</html>
