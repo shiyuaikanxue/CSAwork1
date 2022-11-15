@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let n = prompt('请输入你想要实现阶乘的整数n：');
+        // 循环实现
+        function factorial(n){
+            let result = 1;
+            for(var i=1;i<=n;i++){
+                result*=i;
+            }
+            return result;
+        }
+        // 递归实现
+        // function factorial(n){
+        //     if(n==1) return 1;
+        //     else return n*factorial(n-1);
+        // }
+        console.log(factorial(n));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

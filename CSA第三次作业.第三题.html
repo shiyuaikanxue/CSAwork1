@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let obj1={
+            name:'js',
+            time:'threeweeks',
+            obj3:{
+                age:20,
+            }
+        };
+        // 浅拷贝是创建一个新的空对象，在新对象的创建对原对象数据集的引用，无论改变原对象数据还是改变新对象数据，双方都会同时发生改变
+        let obj2={};
+        Object.assign(obj2,obj1);
+        console.log(obj1.name);
+        console.log(obj2.name);
+        obj2.name +='hello,world';
+        console.log(obj1.name);
+        console.log(obj2.name);
+        console.log(obj1.obj3.age);
+        console.log(obj2.obj3.age);
+        obj1.obj3.age = 15;
+        console.log(obj1.obj3.age);
+        console.log(obj2.obj3.age);
+        obj4={
+            language:'js',
+            time:'threewekks'
+        }
+        // 这个深拷贝是在确实已经是对象的前提下进行的，所以就只需要考虑对象内的属性拷贝
+        // 深拷贝的大致就是创建一个新对象，实现对原对象的所有内容上的复制
+        // 我认为深拷贝的实质是得到两个一模一样的数据，可以达到分开处理，互不干扰的效果
+        clone = (obj) =>{
+                let cloneobj={};
+                for(key in obj)
+                {
+                    cloneobj[key]=obj[key];
+                }
+                return cloneobj;
+        }
+        obj5=clone(obj4);
+        console.log(obj4.language);
+        console.log(obj5.language);
+        obj4.language+='java';
+        console.log(obj4.language);
+        console.log(obj5.language);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
