@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main-background {
+            width: 800px;
+            height: 800px;
+            border-radius: 20px;
+            background: linear-gradient(top right, #89dcd9, #a4c0e1);
+            background: -ms-linear-gradient(top right, #89dcd9, #a4c0e1);
+            background: -webkit-linear-gradient(top right, #89dcd9, #a4c0e1);
+            background: -moz-linear-gradient(top right, #89dcd9, #a4c0e1);
+            position: relative;
+        }
+
+        .main {
+            /* width: 603px; */
+            /* height: 605px; */
+            position: absolute;
+            top: 10px;
+            left: 0px;
+        }
+
+        .item-1 {
+            grid-area: block1;
+            background-color: #212121;
+            border-top: 3px solid #a2b9bd;
+            border-left: 3px solid #a2b9bd;
+            border-right: 3px solid #a2b9bd;
+            border-radius: 20px 20px 0px 0px;
+            /* text-align: right; */
+        }
+
+        .item-2 {
+            grid-area: block2;
+            background-color: #ffffff;
+            border-left: 3px solid #a2b9bd;
+        }
+
+        .item-3 {
+            grid-area: block3;
+            background-color: #ffffff;
+        }
+
+        .item-4 {
+            grid-area: block4;
+            background-color: #efefef;
+            border-right: 3px solid #a2b9bd;
+        }
+
+        .item-5 {
+            grid-area: block5;
+            background-color: #ffffff;
+            border-left: 3px solid #a2b9bd;
+        }
+
+        .item-6 {
+            grid-area: block6;
+            background-color: #ffffff;
+        }
+
+        .item-7 {
+            grid-area: block7;
+            background-color: #ffffff;
+        }
+
+        .item-8 {
+            grid-area: block8;
+            background-color: #efefef;
+            border-right: 3px solid #a2b9bd;
+        }
+
+        .item-9 {
+            grid-area: block9;
+            background-color: #ffffff;
+            border-left: 3px solid #a2b9bd;
+        }
+
+        .item-10 {
+            grid-area: block10;
+            background-color: #ffffff;
+        }
+
+        .item-11 {
+            grid-area: block11;
+            background-color: #ffffff;
+        }
+
+        .item-12 {
+            grid-area: block12;
+            background-color: #efefef;
+            border-right: 3px solid #a2b9bd;
+        }
+
+        .item-13 {
+            grid-area: block13;
+            background-color: #ffffff;
+            border-left: 3px solid #a2b9bd;
+        }
+
+        .item-14 {
+            grid-area: block14;
+            background-color: #ffffff;
+        }
+
+        .item-15 {
+            grid-area: block15;
+            background-color: #ffffff;
+        }
+
+        .item-16 {
+            grid-area: block16;
+            background-color: #efefef;
+            border-right: 3px solid #a2b9bd;
+        }
+
+        .item-17 {
+            grid-area: block17;
+            background-color: #ffffff;
+            border-left: 3px solid #a2b9bd;
+            border-bottom: 3px solid #a2b9bd;
+            border-radius: 0px 0px 0px 20px;
+        }
+
+        .item-18 {
+            grid-area: block18;
+            background-color: #ffffff;
+            border-bottom: 3px solid #a2b9bd;
+        }
+
+        .item-19 {
+            grid-area: block19;
+            background-color: #fc855e;
+            border-bottom: 3px solid #a2b9bd;
+            border-right: 3px solid #a2b9bd;
+            border-radius: 0px 0px 20px 0px;
+        }
+
+        .main {
+            width: 600px;
+            height: 600px;
+            display: grid;
+            margin: 100px;
+            grid-template-columns: [col-start] 1fr [col-start] 1fr [col-start] 1fr [col-start] 1fr [col-start];
+            grid-template-rows: [row-start] 1fr [row-start] 1fr [row-start] 1fr [row-start] 1fr [row-start] 1fr [row-start] 1fr [row-start];
+            grid-column-gap: 1px;
+            grid-row-gap: 1px;
+            grid-template-areas:
+                "block1 block1 block1 block1"
+                "block2 block2 block3 block4"
+                "block5 block6 block7 block8"
+                "block9 block10 block11 block12"
+                "block13 block14 block15 block16"
+                "block17 block18 block19 block19";
+
+        }
+
+        .main .number {
+            line-height: 90px;
+            text-align: center;
+            font-size: 25px;
+            /* margin-top: 10px; */
+            /* margin-left: 10px; */
+        }
+
+        .main .result {
+            /* line-height: 100px; */
+            font-size: 40px;
+            color: white;
+            float: right;
+            margin-right: 30px;
+            margin-top: 22px;
+        }
+
+        .main .logo-1 {
+            width: 35px;
+            height: 25px;
+            background-image: url(photo/除号.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 37px;
+            margin-left: 54px;
+        }
+
+        .main .logo-2 {
+            width: 35px;
+            height: 25px;
+            background-image: url(photo/乘号.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 37px;
+            margin-left: 54px;
+        }
+
+        .main .logo-3 {
+            width: 35px;
+            height: 25px;
+            background-image: url(photo/加号.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 37px;
+            margin-left: 54px;
+        }
+
+        .main .logo-4 {
+            width: 35px;
+            height: 25px;
+            background-image: url(photo/减号.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 37px;
+            margin-left: 54px;
+        }
+
+        .main .logo-5 {
+            width: 35px;
+            height: 25px;
+            background-image: url(photo/等于.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin-top: 37px;
+            margin-left: 130px;
+        }
+
+        .deepback:active {
+            background-color: #efefef;
+        }
+
+        .deepback1:active {
+            background-color: #e1e1e1;
+        }
+
+        .item-2::after {
+            content: "AC";
+        }
+
+        .item-3::after {
+            content: "清除";
+        }
+
+        .item-5::after {
+            content: "1";
+        }
+
+        .item-6::after {
+            content: "2";
+        }
+
+        .item-7::after {
+            content: "3";
+        }
+
+        .item-9::after {
+            content: "4";
+        }
+
+        .item-10::after {
+            content: "5";
+        }
+
+        .item-11::after {
+            content: "6";
+        }
+
+        .item-13::after {
+            content: "7";
+        }
+
+        .item-14::after {
+            content: "8";
+        }
+
+        .item-15::after {
+            content: "9";
+        }
+
+        .item-17::after {
+            content: ".";
+        }
+
+        .item-18::after {
+            content: "0";
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-background">
+        <div class="main">
+            <div class="item-1">
+                <!-- <input type="text"> -->
+                <span class="result change">0</span>
+            </div>
+            <div class="item-2 number deepback" data-number="AC">
+
+            </div>
+            <div class="item-3 number deepback" data-number="delete">
+            </div>
+            <div class="item-4 number deepback1" data-number="division">
+                <div class="logo-1 number" data-number="division"></div>
+            </div>
+            <div class="item-5 number deepback" data-number="1">
+            </div>
+            <div class="item-6 number deepback" data-number="2">
+            </div>
+            <div class="item-7 number deepback" data-number="3">
+            </div>
+            <div class="item-8 number deepback1" data-number="multiplication">
+                <div class="logo-2 number" data-number="multiplication"></div>
+            </div>
+            <div class="item-9 number deepback" data-number="4">
+            </div>
+            <div class="item-10 number deepback" data-number="5">
+            </div>
+            <div class="item-11 number deepback" data-number="6">
+            </div>
+            <div class="item-12 number deepback1" data-number="addition">
+                <div class="logo-3 number" data-number="addition"></div>
+            </div>
+            <div class="item-13 number deepback" data-number="7">
+            </div>
+            <div class="item-14 number deepback" data-number="8">
+            </div>
+            <div class="item-15 number deepback" data-number="9">
+            </div>
+            <div class="item-16 number deepback1" data-number="subtraction">
+                <div class="logo-4 number" data-number="subtraction"></div>
+            </div>
+            <div class="item-17 number deepback" data-number="point">
+            </div>
+            <div class="item-18 number deepback" data-number="0">
+            </div>
+            <div class="item-19 number" data-number="equal">
+                <div class="logo-5 number" data-number="equal"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var result = 0
+        var next = 0
+        var flag = '0'
+        var exchange = 0
+        result = Number(result)
+        next = Number(next)
+        document.querySelectorAll('.number').forEach((el) => {
+            el.addEventListener('click', inputnumber)
+        })
+        function inputnumber(e) {
+            result = Number(result)
+            next = Number(next)
+            console.log(e.target.dataset.number)
+            var number = e.target.dataset.number
+            if (number === 'delete') {
+                if (flag === '0') {
+                    result = 0
+                    updata(result)
+                    exchange = 0
+                    return
+                }
+                else {
+                    next = 0
+                    updata(next)
+                    exchange = 0
+                    return
+                }
+            }
+            // else if(number === '')
+            else if (number === 'AC') {
+                result = 0
+                next = 0
+                flag = '0'
+                updata(result)
+                exchange = 0
+                return
+            }
+            else if (number === 'division') {
+                console.log(1)
+                flag = '1'
+                exchange = 0
+                return
+            }
+            else if (number === 'multiplication') {
+                console.log(2)
+                flag = '2'
+                exchange = 0
+                return
+            }
+            else if (number === 'addition') {
+                console.log(3)
+                flag = '3'
+                exchange = 0
+                return
+            }
+            else if (number === 'subtraction') {
+                console.log(4)
+                flag = '4'
+                exchange = 0
+                return
+            }
+            else if (number === 'equal') {
+                if (flag === '0') {
+                    updata(result)
+                    exchange = 0
+                }
+                else {
+                    if (flag === '1') {
+
+                        updata(result / next)
+                        result = result / next
+                        next = 0
+                        flag = '0'
+                        exchange = 0
+                        return
+                    }
+                    else if (flag === '2') {
+
+                        updata(result * next)
+                        result = result * next
+                        next = 0
+                        flag = '0'
+                        exchange = 0
+                        return
+                    }
+                    else if (flag === '3') {
+
+                        updata(result + next)
+                        result = result + next
+                        next = 0
+                        flag = '0'
+                        exchange = 0
+                        return
+                    }
+                    else if (flag === '4') {
+
+                        updata(result - next)
+                        result = result - next
+                        next = 0
+                        flag = '0'
+                        exchange = 0
+                        return
+                    }
+                }
+            }
+            else {
+                if (number === 'point') {
+                    if(exchange!=0){
+                        return
+                    }
+                    else{if (flag === '0') {
+                        updata(result + '.')
+                        exchange = 1
+                        return
+                    }
+                    else {
+                        updata(next + '.')
+                        exchange = 1
+                        return
+                    }}
+                }
+                else {
+                    if (exchange === 0) {
+                        if (flag === '0') {
+                            number = Number(number)
+                            console.log(result)
+                            result = result * 10
+                            console.log(result)
+                            result += number
+                            console.log(result)
+                            result = Number(result)
+                            updata(result)
+                            return
+                        }
+                        else {
+                            number = Number(number)
+                            console.log(next)
+                            next = next * 10
+                            console.log(result)
+                            next += number
+                            console.log(result)
+                            next = Number(next)
+                            updata(next)
+                            return
+                        }
+                    }
+                    else {
+                        if (flag === '0') {
+                            number = Number(number)
+                            exchange = Number(exchange)
+                            number = Math.pow(0.1, exchange) * number
+                            result += number
+                            updata(result)
+                            exchange++
+                            return
+                        }
+                        else {
+                            number = Number(number)
+                            exchange = Number(exchange)
+                            number = Math.pow(0.1, exchange) * number
+                            next += number
+                            updata(next)
+                            exchange++
+                            return
+                        }
+                    }
+                }
+            }
+        }
+        function updata(newresult) {
+            document.querySelector('.change').innerHTML = newresult
+        }
+    </script>
+</body>
+
+</html>

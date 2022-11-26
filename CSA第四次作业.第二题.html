@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .main {
+            width: 1100px;
+            height: 550px;
+            /* background-color: red; */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -275px;
+            margin-left: -550px;
+            /* 两个display为inline-block的盒子并行也会存在空白间隙，可以用下面语句消除空隙 */
+            font-size: 0px;
+        }
+
+        .background-pic {
+            /* display: inline-block; */
+            width: 660px;
+            height: 544px;
+            background-image: url(photo/图例2.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            border-top: 3px solid #edeeee;
+            border-left: 3px solid #edeeee;
+            border-bottom: 3px solid #edeeee;
+            /* 该语句可以使盒子棱角圆滑，存在四个角的分别控制 */
+            border-radius: 20px 0px 0px 20px;
+            float: left;
+        }
+
+        .function {
+            /* display: inline-block; */
+            width: 437px;
+            height: 550px;
+            float: right;
+            /* background-color: red; */
+        }
+
+        .hint {
+            width: 434px;
+            height: 140px;
+            border-right: 3px solid #edeeee;
+            border-top: 3px solid #edeeee;
+            border-radius: 0px 20px 0px 0px;
+            /* background-color: red; */
+        }
+
+        .hint .logo {
+            width: 60px;
+            height: 70px;
+            background-image: url(photo/灯泡.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            float: left;
+            margin-top: 26px;
+            margin-left: 38px;
+        }
+
+        .hint .hint-word {
+            /* display: inline-block; */
+            font-size: 62px;
+            float: right;
+            font-family: 宋体;
+            margin-top: 31px;
+            margin-right: 14px;
+
+        }
+
+        .days {
+            width: 434px;
+            height: 270px;
+            border-right: 3px solid #edeeee;
+            /* border-top: 3px solid #edeeee; */
+            /* border-radius: 0px 20px 0px 0px; */
+            /* background-color: red; */
+            font-size: 62px;
+            font-family: 宋体;
+        }
+
+        .days .day-num {
+            font-size: 124px;
+
+            float: left;
+            color: red;
+            margin-top: 74px;
+            margin-left: 101px;
+        }
+
+        .days .day {
+            margin-top: 109px;
+            float: right;
+            margin-right: 135px;
+        }
+
+        .oclok-minute-seconde-div {
+            width: 434px;
+            height: 134px;
+            /* background-color: red; */
+            border-right: 3px solid #edeeee;
+            border-bottom: 3px solid #edeeee;
+            border-radius: 0px 0px 20px 0px;
+        }
+
+        .oclok-minute-seconde {
+            height: 60px;
+            /* width: 100%; */
+            /* background-color: red; */
+            margin-top: 0px;
+            font-size: 36px;
+            margin-left: 40px;
+            font-family: 宋体;
+        }
+        .oclok-minute-seconde .data{
+            margin-right: 0px;
+            line-height: 60px;
+        }
+        .oclok-minute-seconde .num{
+            font-size: 37px;
+            display: inline-block;
+            text-align: center;
+            width: 60px;
+            background-color: #edeeee;
+            border-radius: 1px 1px 1px 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="background-pic"></div>
+        <div class="function">
+            <div class="hint">
+                <div class="logo"></div>
+                <p class="hint-word">距新年还剩</p>
+            </div>
+            <div class="days">
+                <span class="day-num">43</span>
+                <span class="day">天</span>
+            </div>
+            <div class="oclok-minute-seconde-div">
+                <div class="oclok-minute-seconde">
+                    <span class="num data hour-num">8</span>
+                    <span class="data">时</span>
+                    <span class="num data minute-num">52</span>
+                    <span class="data">分</span>
+                    <span class="num data second-num">37</span>
+                    <span class="data">秒</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var countData = new Date('Jan 1, 2023 00:00:00').getTime();
+        function count(){
+            var now = new Date().getTime();
+            gap = countData - now;
+            var second = 1000;
+            console.log(second)
+            var minute = second*60;
+            var hour = minute*60;
+            var day = hour*24;
+
+
+            var myday = Math.floor(gap / (day));
+            console.log(myday)
+            var myhour = Math.floor((gap % (day)) / (hour));
+            var myminute = Math.floor(gap % (hour) / (minute));
+            var mysecond = Math.floor(gap % (minute) / (second));
+
+
+            document.querySelector('.day-num').innerHTML = myday
+            document.querySelector('.hour-num').innerHTML = myhour
+            document.querySelector('.minute-num').innerHTML = myminute
+            document.querySelector('.second-num').innerHTML = mysecond
+        }
+        setInterval(function(){
+            count();
+        },1000)
+    </script>
+</body>
+
+</html>
