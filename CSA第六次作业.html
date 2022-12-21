@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        img{
+            vertical-align: middle;
+        }
+        a{
+            text-decoration: none;
+        }
+        input{
+            outline: none;
+        }
+        html,body{
+            height: 100%;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        .header{
+            height: 20vw;
+            background-color: #d14236;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 3vw;
+        }
+        .header .logo{
+            background-image: url(photo/网易云音乐.png);
+            width: 8vw;
+            height: 8vw;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin:auto 2vw auto 0;
+            /* margin-left: 0.5rem; */
+            display: inline-block;
+        }
+        .header .downloade{
+            color: #d14236;
+            display: inline-block;
+            width: 20vw;
+            height: 8vw;
+            border-radius: 4vw;
+            background-color: white;
+            text-align: center;
+            line-height: 8vw;
+            margin:auto 0 auto 2vw;
+            /* margin-top: 6.8vw; */
+        }
+        .nav{
+            /* background-color: yellow; */
+            height: 8vw;
+            border-bottom: 1px solid #ededee;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 8vw;
+        }
+        .nav span{
+            margin-top: 1.6vw;
+            font-size: 3.2vw;
+        }
+        .nav .title{
+            color: #db1b55;
+            border-bottom: 2px solid #db1b55;
+        }
+        .footer{
+            flex:1;
+            /* background-color: red; */
+        }
+        .recommend{
+            height: 12vw;
+            /* background-color: green; */
+            line-height: 12vw;
+            /* padding-left: 0.4rem; */
+        }
+        .recommend span{
+            border-left: 2px solid #db1b55;
+            /* margin-left: 0.4rem; */
+            padding-left: 1.6vw;
+        }
+        .box{
+            height: 40vw;
+            width: 32vw;
+            /* background-color: red; */
+            display: inline-block;
+        }
+        .materia{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            margin-bottom: 2vw;
+        }
+        .materia .pic{
+            height: 32vw;
+            width: 32vw;
+        }
+        .materia .pic1{
+            background-image: url(photo/超凡蜘蛛侠.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .materia .pic2{
+            background-image: url(photo/绿色蜥蜴.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .materia .pic3{
+            background-image: url(photo/鬼刀.小绿.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .materia .pic4{
+            background-image: url(photo/鬼刀.小绿2.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .materia .pic5{
+            background-image: url(photo/英雄联盟.阿狸.jpg);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .materia .pic6{
+            background-image: url(photo/碧蓝航线.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .materia .box .defin{
+            font-size: 0.4vw;
+            margin: 0.8vw;
+        }
+        .music{
+            height: 15vw;
+            margin-left: 0.5vw;
+            /* background-color: red; */
+            border-bottom: 1px solid #f3f4f5;
+            display: flex;
+            justify-content: space-between;
+        }
+        .music .musicdetial{
+            height: 12vw;
+            margin:auto 0vw auto 2vw;
+        }
+        .music .beginlogo{
+            height: 6vw;
+            width: 6vw;
+            background-image: url(photo/音乐播放.png);
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin:auto 2vw auto 0vw;
+        }
+        .music .musicpeo{
+            font-size: 1vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo"></div>
+        <span class="downloade">下载APP</span>
+    </div>
+    <div class="nav">
+        <span class="title">推荐音乐</span>
+        <span>热歌榜</span>
+        <span>热搜</span>
+    </div>
+    <div class="footer">
+        <div class="recommend"><span>编辑推荐</span></div>
+        <div class="materia">
+            <div class="box">
+                <div class="pic pic1"></div>
+                <div class="defin">你总要一个人，经历一些难捱的日子。</div>
+            </div>
+            <div class="box">
+                <div class="pic pic2"></div>
+                <div class="defin">男人的心湖侵入心底</div>
+            </div>
+            <div class="box">
+                <div class="pic pic3"></div>
+                <div class="defin">二十岁后的人生像是按了加快键</div>
+            </div>
+        </div>
+        <div class="materia">
+            <div class="box">
+                <div class="pic pic4"></div>
+                <div class="defin">用因音乐保持你每天的嘴角上扬</div>
+            </div>
+            <div class="box">
+                <div class="pic pic5"></div>
+                <div class="defin">那些充满强烈画面感的音乐</div>
+            </div>
+            <div class="box">
+                <div class="pic pic6"></div>
+                <div class="defin">高能燃脂，假期跑步健身必备</div>
+            </div>
+        </div>
+        <div class="recommend"><span>最新音乐</span></div>
+        <div class="music">
+            <div class="musicdetial">
+                <span class="musicname">善变</span>
+                <div class="musicpeo">王靖雯不胖</div>
+            </div>
+            <div class="beginlogo"></div>
+        </div>
+        <div class="music">
+            <div class="musicdetial">
+                <span class="musicname">浮夸</span>
+                <div class="musicpeo">陈奕迅</div>
+            </div>
+            <div class="beginlogo"></div>
+        </div>
+        <div class="music">
+            <div class="musicdetial">
+                <span class="musicname">玫瑰</span>
+                <div class="musicpeo">贰佰</div>
+            </div>
+            <div class="beginlogo"></div>
+        </div>
+        <div class="music">
+            <div class="musicdetial">
+                <span class="musicname">我是如此相信</span>
+                <div class="musicpeo">周杰伦</div>
+            </div>
+            <div class="beginlogo"></div>
+        </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>
